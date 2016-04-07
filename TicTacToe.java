@@ -130,17 +130,11 @@ class TicTacToe{
 
 	//Subtrair depth à heuristica para priorizar os nós mais acima
 	
-	if(winner.equals("X")){
+	if(!winner.equals("DRAW")){
 	    if(winner.equals(player))
 		return -10+d;
 	    else
-		return 10-d;	    
-	}
-        if(winner.equals("O")){
-	    if(winner.equals(player))
-		return -10+d;
-	    else
-		return 10-d;
+	    	return 10-d;	    
 	}
 	//draw
 	return 0;
